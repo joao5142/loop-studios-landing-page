@@ -1,5 +1,4 @@
 import style from "./Button.module.scss";
-import classNames from "classnames";
 import { ReactNode } from "react";
 
 type Props = {
