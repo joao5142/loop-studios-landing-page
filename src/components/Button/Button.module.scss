@@ -1,0 +1,16 @@
+@use "/styles/variables" as variables;
+
+.button {
+  padding: 8px 60px;
+  background: transparent;
+
+  text-transform: uppercase;
+
+  border: 2px solid variables.$dark-gray-400;
+
+  &:hover {
+    color: white;
+    background: variables.$black;
+    border-color: variables.$black;
+  }
+}

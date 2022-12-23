@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+@import "./utils";
+
+/*##RESET*/
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+
+  font-size: 1rem;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+
+li {
+  position: relative;
+}
+li:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+
+  width: 0px;
+  height: 2px;
+  background-color: white;
+
+  animation: grow 0.7s ease-in-out forwards;
+}
+@keyframes grow {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+img {
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  border: 0;
+  outline: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  border: 0;
+  outline: none;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  margin: 200px 0px;
+
+  @media (max-width: 600px) {
+    margin: 50px 0px;
+  }
+}
+a {
+  font-size: 1.2rem;
+  color: white;
+}

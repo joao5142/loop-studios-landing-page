@@ -1,0 +1,25 @@
+@use "/styles/variables" as variables;
+
+.footer {
+  padding: 40px 0px;
+  background: variables.$black;
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+  p {
+    color: variables.$dark-gray-400;
+    font-size: 1rem;
+    margin: 0px;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,56 @@
+@use "@styles/variables.scss" as variables;
+@use "@styles/fonts.scss";
+
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+
+  background: variables.$black;
+  padding: 70px 40px 0px 40px;
+  overflow: hidden;
+
+  &__logo {
+    width: 100%;
+    max-height: 52px;
+  }
+
+  &__close {
+    width: 40px;
+    height: 40px;
+
+    @media (max-width: 400px) {
+      & {
+        max-width: 30px;
+        max-height: 30px;
+      }
+    }
+  }
+  &__nav ul {
+    margin-top: 200px;
+    padding: 0px;
+  }
+  &__nav li {
+    margin-bottom: 30px;
+  }
+  &__nav a {
+    color: white;
+    font-size: 4rem;
+    text-transform: uppercase;
+
+    @extend %font-josefins;
+
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-height: 750px) {
+    &__nav ul {
+      margin-top: 100px;
+    }
+  }
+}

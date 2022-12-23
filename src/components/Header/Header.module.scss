@@ -1,0 +1,123 @@
+@use "/styles/_fonts.scss";
+
+.header {
+  height: calc(500px + 13vw);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+
+  position: relative;
+  z-index: 4;
+
+  @media (min-width: 1444px) {
+    height: calc(600px + 13vw);
+    background-size: cover;
+  }
+
+  @media (max-width: 800px) {
+    &,
+    &__background,
+    &__banner {
+      height: 800px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.3)
+    );
+  }
+
+  &__background {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+  }
+
+  &__banner {
+    height: 100%;
+    position: relative;
+    z-index: 4;
+  }
+
+  &__banner-text {
+    padding: 30px;
+    padding-right: 100px;
+
+    max-width: 600px;
+    border: 3px solid white;
+
+    position: absolute;
+    bottom: 150px;
+    left: 0px;
+
+    color: white;
+
+    h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+
+      @extend %font-josefins;
+    }
+
+    @media (max-width: 800px) {
+      h1 {
+        bottom: 50px;
+        width: 100%;
+        font-size: 3.4rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        bottom: 50px;
+        width: 100%;
+
+        font-size: 2.8rem;
+      }
+      & {
+        padding-right: 20px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+    }
+    @media (max-width: 350px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @media (min-width: 1600px) {
+    h1 {
+      bottom: 150px;
+      width: 100%;
+      font-size: 5rem;
+    }
+    &__banner-text {
+      max-width: 800px;
+      padding-right: 100px;
+    }
+  }
+}
