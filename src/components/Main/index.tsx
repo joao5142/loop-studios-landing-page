@@ -51,7 +51,7 @@ export default function Main() {
 
   return (
     <main className={style.main}>
-      <section>
+      <section className="margin">
         <div className="row position-relative">
           <div className="col-12 col-lg-8">
             <Image
@@ -81,7 +81,7 @@ export default function Main() {
         </div>
       </section>
 
-      <section>
+      <section className="mb-5 ">
         <div className="d-flex flex-wrap  align-items-center justify-content-between">
           <h1 className="title mb-3 mb-md-0">Our creations</h1>
           <Button>See all</Button>
